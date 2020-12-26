@@ -1,14 +1,18 @@
 import React from "react";
-import "./profile.css";
+import styles from "./Profile.module.css";
 
 const Profile = (props) => {
   return (
-      <div className="description">
-        <img src={props.avatar} alt="Аватар пользователя" className="avatar" />
-        <p className="name">{props.name}</p>
-        <p className="tag">@{props.tag}</p>
-        <p className="location">{props.location}</p>
-      </div>
+    <div className={styles.description}>
+      <img
+        src={props.avatar}
+        alt="Аватар пользователя"
+        className={styles.avatar}
+      />
+      <p className={styles.name}>{props.name}</p>
+      <p className={styles.tag}>@{props.tag}</p>
+      <p className={styles.location}>{props.location}</p>
+    </div>
   );
 };
 
