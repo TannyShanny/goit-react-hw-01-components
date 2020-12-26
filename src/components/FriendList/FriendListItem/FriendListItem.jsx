@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./FriendListItem.module.css";
-import friends from "../friends.json";
 
 const FriendListItem = ({ friend }) => {
   return (
-    <li class={styles.item} key={friend.id}>
+    <li className={styles.item} key={friend.id}>
       <span
         className={friend.isOnline ? styles.statusOnline : styles.statusOffline}
       ></span>

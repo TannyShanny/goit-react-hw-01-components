@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Profile.module.css";
+import PropTypes from "prop-types";
 
 const Profile = (props) => {
   return (
@@ -14,6 +15,18 @@ const Profile = (props) => {
       <p className={styles.location}>{props.location}</p>
     </div>
   );
+};
+
+Profile.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
 
 export default Profile;
