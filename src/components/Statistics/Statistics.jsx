@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const Statistics = ({ title, stats }) => (
   <section className={styles.statistic}>
-    <h2 className={styles.title}>{title}</h2>
+    {title && <h2 className={styles.title}>{title}</h2>}
     <ul className={styles.stat_list}>
       {stats.map((stat) => (
         <li className={styles.item} key={stat.id}>
@@ -15,6 +15,8 @@ const Statistics = ({ title, stats }) => (
     </ul>
   </section>
 );
+
+// {title && <h2 className={style.title}>{title}</h2>}
 
 Statistics.defaultProps = {
   title: "",
